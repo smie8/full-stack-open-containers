@@ -1,0 +1,101 @@
+Script started on Fri Jul  1 12:41:39 2022
+]7;file://S1932.local/Users/samie/Documents/full-stack-open/full-stack-open-containers[1m[7m%[27m[1m[0m                                                                                                                                           ]7;file://S1932.local/Users/samie/Documents/full-stack-open/full-stack-open-containers]2;samie@S1932]1;..en-containers]7;file://S1932.local/Users/samie/Documents/full-stack-open/full-stack-open-containers[0m[27m[24m[J[01;32m➜  [36mfull-stack-open-containers[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hddocker lc  conte ainer ls[?1l>[?2004l
+]2;docker container ls]1;dockerCONTAINER ID   IMAGE     COMMAND                  CREATED             STATUS             PORTS                                         NAMES
+f2f4e140dcb5   nginx     "/docker-entrypoint.…"   7 minutes ago       Up 6 minutes       0.0.0.0:8080->80/tcp, :::8080->80/tcp         clever_payne
+e4f18f88c359   mongo     "docker-entrypoint.s…"   About an hour ago   Up About an hour   0.0.0.0:3456->27017/tcp, :::3456->27017/tcp   todo-backend-mongo-1
+[1m[7m%[27m[1m[0m                                                                                                                                           ]7;file://S1932.local/Users/samie/Documents/full-stack-open/full-stack-open-containers]2;samie@S1932]1;..en-containers]7;file://S1932.local/Users/samie/Documents/full-stack-open/full-stack-open-containers[0m[27m[24m[J[01;32m➜  [36mfull-stack-open-containers[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hdocker container ls[19Dscript script-answers/exercise12_8.txt[38Dls                                    [36Dscript script-answers/exercise12_8.txt[38Dls                                    [36Dcd ..docker exec -it clever_payne bash[26Dcontainer ls              [14D[12Dexec -it clever_payne bash bash  bash  bash  bash  bash  bash  bash  bash  bash  bash  bash  bash [7mt[7mo[7md[7mo[7m-[7mbackend-mongo-1[27m bash[20D[27mt[27mo[27md[27mo[27m-[27mb[27ma[27mc[27mk[27me[27mn[27md[27m-[27mm[27mo[27mn[27mg[27mo[27m-[27m1  bashbash [?1l>[?2004l
+]2;docker exec -it todo-backend-mongo-1 bash]1;docker]0;root@e4f18f88c359: /root@e4f18f88c359:/# mongo
+MongoDB shell version v5.0.6
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("28151f8e-2963-4d69-a36f-7816d22d912e") }
+MongoDB server version: 5.0.6
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+	https://docs.mongodb.com/
+Questions? Try the MongoDB Developer Community Forums
+	https://community.mongodb.com
+> show dbs[3G[Jshow dbs[11G
+> exit[3G[Jexit[7G
+bye
+]0;root@e4f18f88c359: /root@e4f18f88c359:/# mongo -u root -p example
+MongoDB shell version v5.0.6
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("ccd287af-2dfa-4824-8aec-6ded41665c0f") }
+MongoDB server version: 5.0.6
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting: 
+        2022-07-01T08:24:08.037+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+        2022-07-01T08:24:08.842+00:00: /sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never'
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show s[3G[Jshow [8Gs[3G[Jshow [8Gdbs[3G[Jshow dbs[11G
+admin         0.000GB
+config        0.000GB
+local         0.000GB
+the_database  0.000GB
+> use the_database[3G[Juse the_database[19G
+switched to db the_database
+> show collecdt[3G[Jshow collecd[15G[3G[Jshow collec[14Gtions[3G[Jshow collections[19G
+todos
+> db.todos.find({})[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("62beaf26cdbc03c8acb84e5a"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("62beaf26cdbc03c8acb84e5b"), "text" : "Foo 2", "done" : false }
+> db.tos[3G[Jdb.to[8Gdos.ind[3G[Jdb.todos.in[14GsertOne({ })[3G[Jdb.todos.insertOne[1;34m([0m{ })[25G[3G[Jdb.todos.insertOne([1;34m{[0m })[24G[3G[Jdb.todos.insertOne({ })[23G[3G[Jdb.todos.insertOne({  })[24G[3G[Jdb.todos.insertOne({ t })[25G[3G[Jdb.todos.insertOne({ te })[26G[3G[Jdb.todos.insertOne({ tex })[27G[3G[Jdb.todos.insertOne({ text })[28G[3G[Jdb.todos.insertOne({ text: })[29G[3G[Jdb.todos.insertOne({ text:  })[30G[3G[Jdb.todos.insertOne({ text: " })[31G[3G[Jdb.todos.insertOne({ text: "I })[32G[3G[Jdb.todos.insertOne({ text: "In })[33G[3G[Jdb.todos.insertOne({ text: "Inc })[34G[3G[Jdb.todos.insertOne({ text: "Incr })[35G[3G[Jdb.todos.insertOne({ text: "Incre })[36G[3G[Jdb.todos.insertOne({ text: "Increa })[37G[3G[Jdb.todos.insertOne({ text: "Increas })[38G[3G[Jdb.todos.insertOne({ text: "Increase })[39G[3G[Jdb.todos.insertOne({ text: "Increase  })[40G[3G[Jdb.todos.insertOne({ text: "Increase t })[41G[3G[Jdb.todos.insertOne({ text: "Increase th })[42G[3G[Jdb.todos.insertOne({ text: "Increase the })[43G[3G[Jdb.todos.insertOne({ text: "Increase the  })[44G[3G[Jdb.todos.insertOne({ text: "Increase the n })[45G[3G[Jdb.todos.insertOne({ text: "Increase the nu })[46G[3G[Jdb.todos.insertOne({ text: "Increase the num })[47G[3G[Jdb.todos.insertOne({ text: "Increase the numb })[48G[3G[Jdb.todos.insertOne({ text: "Increase the numbe })[49G[3G[Jdb.todos.insertOne({ text: "Increase the number })[50G[3G[Jdb.todos.insertOne({ text: "Increase the number  })[51G[3G[Jdb.todos.insertOne({ text: "Increase the number o })[52G[3G[Jdb.todos.insertOne({ text: "Increase the number of })[53G[3G[Jdb.todos.insertOne({ text: "Increase the number of  })[54G[3G[Jdb.todos.insertOne({ text: "Increase the number of t })[55G[3G[Jdb.todos.insertOne({ text: "Increase the number of to })[56G[3G[Jdb.todos.insertOne({ text: "Increase the number of too })[57G[3G[Jdb.todos.insertOne({ text: "Increase the number of tool })[58G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools })[59G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools  })[60G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools i })[61G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in })[62G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in  })[63G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in m })[64G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my })[65G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my  })[66G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my t })[67G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my to })[68G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my too })[69G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my tool })[70G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my toolb })[71G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my toolbe })[72G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my toolbel })[73G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my toolbelt })[74G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my toolbelt" })[75G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my toolbelt", })[76G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my toolbelt",  })[77G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my toolbelt", d })[78G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my toolbelt", do })[79G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my toolbelt", don })[80G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my toolbelt", done })[81G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my toolbelt", done: })[82G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my toolbelt", done:  })[83G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my toolbelt", done: f })[84G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my toolbelt", done: fa })[85G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my toolbelt", done: fal })[86G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my toolbelt", done: fals })[87G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my toolbelt", done: false })[88G[3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my toolbelt", done: false })[91G
+{
+	"acknowledged" : true,
+	"insertedId" : ObjectId("62bec1eaaa002584ae081d21")
+}
+> [3G[Jdb.todos.insertOne({ text: "Increase the number of tools in my toolbelt", done: false })[91G[3G[Jdb.todos.find({})[20G[3G[Jshow collections[19G[3G[Jdb.todos.find({})[20G[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("62beaf26cdbc03c8acb84e5a"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("62beaf26cdbc03c8acb84e5b"), "text" : "Foo 2", "done" : false }
+{ "_id" : ObjectId("62bec1eaaa002584ae081d21"), "text" : "Increase the number of tools in my toolbelt", "done" : false }
+> exit[3G[Jexit[7G
+bye
+]0;root@e4f18f88c359: /root@e4f18f88c359:/# exit
+exit
+[1m[7m%[27m[1m[0m                                                                                                                                           ]7;file://S1932.local/Users/samie/Documents/full-stack-open/full-stack-open-containers]2;samie@S1932]1;..en-containers]7;file://S1932.local/Users/samie/Documents/full-stack-open/full-stack-open-containers[0m[27m[24m[J[01;32m➜  [36mfull-stack-open-containers[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[7mMONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database npm run dev[27m[85D[27mM[27mO[27mN[27mG[27mO[27m_[27mU[27mR[27mL[27m=[27mm[27mo[27mn[27mg[27mo[27md[27mb[27m:[27m/[27m/[27mt[27mh[27me[27m_[27mu[27ms[27me[27mr[27mn[27ma[27mm[27me[27m:[27mt[27mh[27me[27m_[27mp[27ma[27ms[27ms[27mw[27mo[27mr[27md[27m@[27ml[27mo[27mc[27ma[27ml[27mh[27mo[27ms[27mt[27m:[27m3[27m4[27m5[27m6[27m/[27mt[27mh[27me[27m_[27md[27ma[27mt[27ma[27mb[27ma[27ms[27me[27m [27mn[27mp[27mm[27m [27mr[27mu[27mn[27m [27md[27me[27m                       [59D                                                           [59Dlls[?1l>[?2004l
+]2;ls -G]1;ls[1m[36mexpress-app[39;49m[0m    [1m[36mhello-app[39;49m[0m      [1m[36mscript-answers[39;49m[0m [1m[36mtemp[39;49m[0m           [1m[36mtodo-app[39;49m[0m
+[1m[7m%[27m[1m[0m                                                                                                                                           ]7;file://S1932.local/Users/samie/Documents/full-stack-open/full-stack-open-containers]2;samie@S1932]1;..en-containers]7;file://S1932.local/Users/samie/Documents/full-stack-open/full-stack-open-containers[0m[27m[24m[J[01;32m➜  [36mfull-stack-open-containers[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hccd todo-app[1m/[0m[0m [?1l>[?2004l
+]2;cd todo-app]1;cd[1m[7m%[27m[1m[0m                                                                                                                                           ]7;file://S1932.local/Users/samie/Documents/full-stack-open/full-stack-open-containers/todo-app]2;samie@S1932]1;..ners/todo-app]7;file://S1932.local/Users/samie/Documents/full-stack-open/full-stack-open-containers/todo-app[0m[27m[24m[J[01;32m➜  [36mtodo-app[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hccd tt odo-backend[1m/[0m[0m [?1l>[?2004l
+]2;cd todo-backend]1;cd[1m[7m%[27m[1m[0m                                                                                                                                           ]7;file://S1932.local/Users/samie/Documents/full-stack-open/full-stack-open-containers/todo-app/todo-backend]2;samie@S1932]1;../todo-backend]7;file://S1932.local/Users/samie/Documents/full-stack-open/full-stack-open-containers/todo-app/todo-backend[0m[27m[24m[J[01;32m➜  [36mtodo-backend[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hcd todo-backend[15D               [15D[7mMONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database npm run dev[27m[85D[27mM[27mO[27mN[27mG[27mO[27m_[27mU[27mR[27mL[27m=[27mm[27mo[27mn[27mg[27mo[27md[27mb[27m:[27m/[27m/[27mt[27mh[27me[27m_[27mu[27ms[27me[27mr[27mn[27ma[27mm[27me[27m:[27mt[27mh[27me[27m_[27mp[27ma[27ms[27ms[27mw[27mo[27mr[27md[27m@[27ml[27mo[27mc[27ma[27ml[27mh[27mo[27ms[27mt[27m:[27m3[27m4[27m5[27m6[27m/[27mt[27mh[27me[27m_[27md[27ma[27mt[27ma[27mb[27ma[27ms[27me[27m [27mn[27mp[27mm[27m [27mr[27mu[27mn[27m [27md[27me[27mv[?1l>[?2004l
+]2;MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database npm]1;npm
+> todo-express-backend@0.0.0 dev /Users/samie/Documents/full-stack-open/full-stack-open-containers/todo-app/todo-backend
+> nodemon ./bin/www
+
+[33m[nodemon] 2.0.12[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node ./bin/www`[39m
+[0mGET /todos/ [32m200 [0m28.020 ms - 232[0m
+[0mGET /todos/62bec1eaaa002584ae081d21 [32m200 [0m11.755 ms - 100[0m
+^C[1m[7m%[27m[1m[0m                                                                                                                                           ]7;file://S1932.local/Users/samie/Documents/full-stack-open/full-stack-open-containers/todo-app/todo-backend]2;samie@S1932]1;../todo-backend]7;file://S1932.local/Users/samie/Documents/full-stack-open/full-stack-open-containers/todo-app/todo-backend[0m[27m[24m[J[01;32m➜  [36mtodo-backend[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Saving session...completed.
+
+Script done on Fri Jul  1 12:46:13 2022
