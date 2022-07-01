@@ -1,5 +1,7 @@
 .DS_Store
-node_modules/
+**/node_modules/*
+**/redis_data/*
+**/mongo_data/*
 *.log
 .npm
 .env
