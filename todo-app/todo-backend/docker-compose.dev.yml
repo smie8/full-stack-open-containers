@@ -13,6 +13,7 @@ services:
       # initialize database with some data 
       - ./mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
       - mongo_data:/data/db
+    container_name: todo-mongo
   redis:
     image: redis:alpine
     restart: always
@@ -22,6 +23,22 @@ services:
     # persist data by declaring volume here
     volumes:
       - redis_data:/data
+    container_name: todo-redis
+  server:
+    image: todo-backend-dev
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - 3000:3000
+    container_name: todo-backend-dev
+    environment:
+      - REDIS_URL=redis://todo-redis:6379
+      - MONGO_URL=mongodb://the_username:the_password@todo-mongo:27017/the_database
+  debug-helper:
+    image: busybox
 
 volumes:
   mongo_data:
