@@ -1,9 +1,16 @@
-# Run in development
+# Run app
+In development:
 ```
 docker compose -f docker-compose.dev.yml up
 ```
-With your browser go to: http://localhost:8080/.
-If you want to access api directly, go to http://localhost:8080/api
+
+Or in production:
+```
+docker compose up
+```
+
+Then go to: http://localhost:8080/ with your browser.
+You can access the api directly from http://localhost:8080/api.
 
 # Other
 If you want to go inside Nginx container and try to send requests to the application itself:
