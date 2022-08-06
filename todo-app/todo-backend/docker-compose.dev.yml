@@ -32,7 +32,7 @@ services:
     volumes:
       - ./:/usr/src/app
     ports:
-      - 3000:3000
+      - 3001:3000
     container_name: todo-backend-dev
     environment:
       - REDIS_URL=redis://todo-redis:6379
