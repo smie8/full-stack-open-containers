@@ -4,14 +4,14 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-ENV REACT_APP_BACKEND_URL="http://localhost:3000"
+#RUN npm ci
 
 RUN npm install
 
-#RUN npm ci
-
 RUN CI=true npm test
 
-#RUN npm run build
+RUN npm run build
 
-CMD npm start
+FROM nginx:1.20.1
+
+COPY --from=build-stage /usr/src/app/build /usr/share/nginx/html
